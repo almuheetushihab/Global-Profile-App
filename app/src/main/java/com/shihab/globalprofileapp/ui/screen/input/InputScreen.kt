@@ -39,7 +39,7 @@ fun InputScreen(onNavigate: () -> Unit) {
             label = { Text("Enter Name") },
         )
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(16.dp))
 
         TextField(
             value = roleInput,
@@ -47,14 +47,15 @@ fun InputScreen(onNavigate: () -> Unit) {
             label = { Text("Enter Role") },
         )
 
-        Button(onClick = {
-            UserProfileManager.updateProfile(
-                nameInput,
-                roleInput,
-            )
-            onNavigate()
-        },
-            modifier = Modifier.padding(top = 16.dp)
+        Button(
+            onClick = {
+                UserProfileManager.updateProfile(
+                    newName = nameInput,
+                    newRole = roleInput,
+                )
+                onNavigate()
+            },
+            modifier = Modifier.padding(top = 24.dp)
         ) {
             Text("Save to Singleton & Next")
         }
