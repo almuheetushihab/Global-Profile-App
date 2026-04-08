@@ -10,9 +10,4 @@ object UserProfileManager {
         userName.value = newName
         userRole.value = newRole
     }
-
-    fun clearData() {
-        userName.value = ""
-        userRole.value = ""
-    }
 }
